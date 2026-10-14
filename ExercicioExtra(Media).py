@@ -1,12 +1,15 @@
 print('=' * 40)
 print('\033[1;36m{:^40}\033[m'.format('SIGA 10.0'))
 print('=' * 40)
-nota1 = float(input('Introduze a \033[1;33mprimeira nota\033[m : '))
-nota2 = float(input('Introduza a \033[1;35msegunda nota\033[m : '))
-nota3 = float(input('Introduza a \033[1;36mterceira nota\033[m : '))
+soma = contador = 0
+
+for c in range(0, 3):
+    notas = float(input(f'Insira a {c+1}a nota: '))
+    soma += notas
+    contador += 1
 print('=' * 40)
 
-media = (nota1 + nota2 + nota3)/3
+media = soma/contador
 cores = {'limpo':'\033[m',
          'vermelho':'\033[1;31m',
          'verde':'\033[1;32m',
